@@ -7,7 +7,6 @@ This project aims to predict loan eligibility based on various customer features
 The project directory is structured as follows:
 
 loan-eligibility-prediction/
-
 │
 ├── data/
 │ ├── train.csv # Original training data
