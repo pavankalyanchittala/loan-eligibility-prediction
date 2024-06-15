@@ -32,6 +32,11 @@ loan-eligibility-prediction/
 └── README.md # Project overview and instructions
 
 
+### Explanation
+- Each directory (`data/`, `model/`, `notebooks/`, `src/`) and their respective files are listed with comments indicating their purpose.
+- Use of indentation and symbols (`├──` for directories and `│`, `└──` for files) to visually represent the structure.
+- Ensure each file and directory name matches exactly as per your project structure.
+
 ## Components
 
 ### 1. Exploratory Data Analysis (EDA)
