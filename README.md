@@ -5,7 +5,6 @@ This project aims to predict loan eligibility based on various customer features
 ## Project Structure
 
 The project directory is structured as follows:
-
 loan-eligibility-prediction/
 │
 ├── data/
