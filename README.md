@@ -63,16 +63,16 @@ loan-eligibility-prediction/
    ```bash
    pip install -r requirements.txt
 
-2. **Exploratory Data Analysis**: Run EDA.ipynb to explore and preprocess the data.
+2. **Exploratory Data Analysis**: Run `EDA.ipynb` to explore and preprocess the data.
 
-3. **Model Building**: Execute ModelBuilding.ipynb to train the Random Forest model and generate predictions.
+3. **Model Building**: Execute `ModelBuilding.ipynb` to train the Random Forest model and generate predictions.
 
-4. **Customization**: Modify scripts in src/ for specific data preprocessing, feature engineering, or model training needs.
+4. **Customization**: Modify scripts in `src/` for specific data preprocessing, feature engineering, or model training needs.
 
-5. **Documentation**: Modify README.md to reflect any changes, including detailed explanations of each script's purpose and usage.
+5. **Documentation**: Modify `README.md` to reflect any changes, including detailed explanations of each script's purpose and usage.
 
 ### Notes
-Ensure data paths (../data/) are correctly configured in notebooks and scripts.
-Customize preprocessing, feature engineering, or model parameters based on specific project requirements.
+- Ensure data paths (`../data/`) are correctly configured in notebooks and scripts.
+- Customize preprocessing, feature engineering, or model parameters based on specific project requirements.
 
 
