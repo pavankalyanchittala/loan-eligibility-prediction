@@ -6,6 +6,7 @@ This project aims to predict loan eligibility based on various customer features
 
 The project directory is structured as follows:
 
+```bash
 loan-eligibility-prediction/
 │
 ├── data/
@@ -30,7 +31,7 @@ loan-eligibility-prediction/
 │
 ├── requirements.txt # Python dependencies
 └── README.md # Project overview and instructions
-
+```
 
 ### Explanation
 - Each directory (`data/`, `model/`, `notebooks/`, `src/`) and their respective files are listed with comments indicating their purpose.
