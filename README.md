@@ -5,6 +5,7 @@ This project aims to predict loan eligibility based on various customer features
 ## Project Structure
 
 The project directory is structured as follows:
+
 loan-eligibility-prediction/
 │
 ├── data/
@@ -80,6 +81,6 @@ loan-eligibility-prediction/
    - **Email**: pavankalyanchittala0@gmail.com
    - **Capabl ID**: CPBLaak0485
 
-2. **Dev Amarnadh Gandham**
+2. **Gandham Dev Amarnadh**
    - **Email**: amarndhgandham000@gmail.com
    - **Capabl ID**: CPBLaak0486
