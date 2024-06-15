@@ -75,4 +75,12 @@ loan-eligibility-prediction/
 - Ensure data paths (`../data/`) are correctly configured in notebooks and scripts.
 - Customize preprocessing, feature engineering, or model parameters based on specific project requirements.
 
+## Team Members
 
+1. **Chittala Pavan Kalyan**
+   - **Email**: pavankalyanchittala0@gmail.com
+   - **Capabl ID**: CPBLaak0485
+
+2. **Dev Amarnadh Gandham**
+   - **Email**: amarndhgandham000@gmail.com
+   - **Capabl ID**: CPBLaak0486
