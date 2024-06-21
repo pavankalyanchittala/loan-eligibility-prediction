@@ -113,9 +113,15 @@ print("Merged data saved as model_training.csv")
 
 3. **Model Building**: Execute `ModelBuilding.ipynb` to train the Random Forest model and generate predictions.
 
-4. **Customization**: Modify scripts in `src/` for specific data preprocessing, feature engineering, or model training needs.
+4. **Streamlit Deployment**: Run the app.py file to start the Streamlit app for the online application form.
 
-5. **Documentation**: Modify `README.md` to reflect any changes, including detailed explanations of each script's purpose and usage.
+       ```bash
+   streamlit run app.py
+
+
+6. **Customization**: Modify scripts in `src/` for specific data preprocessing, feature engineering, or model training needs.
+
+7. **Documentation**: Modify `README.md` to reflect any changes, including detailed explanations of each script's purpose and usage.
 
 ### Notes
 - Ensure data paths (`../data/`) are correctly configured in notebooks and scripts.
