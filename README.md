@@ -6,18 +6,25 @@ This project aims to predict loan eligibility based on various customer features
 
 The project directory is structured as follows:
 
+
+
 ```bash
 loan-eligibility-prediction/
 │
 ├── data/
-│ ├── train.csv # Original training data
+│ ├── loan_predictions.csv # Predictions file for test data
+│ ├── model_training.csv # Final training data used for model training
+│ ├── test_cleaned.csv # Cleaned and preprocessed test data
 │ ├── test.csv # Original test data
 │ ├── train_cleaned.csv # Cleaned and preprocessed training data
-│ ├── test_cleaned.csv # Cleaned and preprocessed test data
-│ └── loan_predictions.csv # Predictions file for test data
+│ └── train.csv # Original training data
 │
 ├── model/
-│ └── random_forest_model.pkl # Trained Random Forest model
+│ ├── label_encoders.pkl # Saved LabelEncoders for categorical variables
+│ ├── random_forest_model.pkl # Trained Random Forest model
+│ ├── random_forest_model(1).pkl # Additional trained Random Forest model
+│ ├── scaler.pkl # Saved StandardScaler for feature scaling
+│ └── status_encoder.pkl # Saved LabelEncoder for target variable
 │
 ├── notebooks/
 │ ├── EDA.ipynb # Exploratory Data Analysis notebook
@@ -29,6 +36,7 @@ loan-eligibility-prediction/
 │ ├── model_training.py # Functions for model training and evaluation
 │ └── predictions.py # Functions for making predictions and saving results
 │
+├── app.py # Streamlit deployment app run file
 ├── requirements.txt # Python dependencies
 └── README.md # Project overview and instructions
 ```
