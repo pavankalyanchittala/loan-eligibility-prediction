@@ -115,9 +115,9 @@ print("Merged data saved as model_training.csv")
 
 4. **Streamlit Deployment**: Run the app.py file to start the Streamlit app for the online application form.
 
-```bash
-streamlit run app.py
-```
+   ```bash
+   streamlit run app.py
+   ```
 
 6. **Customization**: Modify scripts in `src/` for specific data preprocessing, feature engineering, or model training needs.
 
