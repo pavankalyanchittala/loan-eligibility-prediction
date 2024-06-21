@@ -2,6 +2,42 @@
 
 This project aims to predict loan eligibility based on various customer features using machine learning techniques. It includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and prediction.
 
+
+This is an online application form to check your eligibility for loan approval. The application uses a deployed Streamlit app.
+
+## Deployed Application
+
+You can access the deployed application to check your loan eligibility using the following link:
+
+[Loan Eligibility Prediction Application](https://github.com/pavankalyanchittala/loan-eligibility-prediction.git)
+
+## Usage Instructions
+
+1. Click on the link above to open the application.
+2. Fill out the required fields in the form.
+3. Submit the form to check your loan eligibility.
+4. The application will provide you with an instant decision on your loan eligibility based on the input provided.
+
+## Application Form Fields
+
+The form requires the following information:
+- Applicant Income
+- Coapplicant Income
+- Loan Amount
+- Loan Amount Term
+- Credit History
+- Gender
+- Marital Status
+- Education
+- Self Employed Status
+- Property Area
+- Dependents
+
+## Additional Information
+
+This application is built using Streamlit, a popular framework for creating data apps in Python. The source code for the application can be found in the GitHub repository linked above.
+
+
 ## Project Structure
 
 The project directory is structured as follows:
