@@ -48,37 +48,66 @@ loan-eligibility-prediction/
 
 ## Components
 
-### Exploratory Data Analysis (EDA)
+### 1. Exploratory Data Analysis (EDA)
 
-**EDA.ipynb**: This notebook performs data loading, cleaning, and exploratory analysis on the `train.csv` and `test.csv` datasets. It generates `train_cleaned.csv` and `test_cleaned.csv` after handling missing values and basic statistical analysis. Visualizations include histograms, heatmaps for missing values, correlation analysis, and categorical vs target variable analysis.
+- **EDA.ipynb**: This notebook performs data loading, cleaning, and exploratory analysis on the `train.csv` and `test.csv` datasets. It generates `train_cleaned.csv` and `test_cleaned.csv` after handling missing values and basic statistical analysis. Visualizations include histograms, heatmaps for missing values, correlation analysis, and categorical vs target variable analysis.
 
-### Model Building and Prediction
+### 2. Model Building and Prediction
 
-**ModelBuilding.ipynb**: Loads preprocessed data (`train_cleaned.csv` and `test_cleaned.csv`), combines them for consistent encoding, adds a Total Income feature, encodes categorical variables, trains a Random Forest Classifier, evaluates its performance, and saves the model as `random_forest_model.pkl`. Finally, it makes predictions on the test set and saves results in `loan_predictions.csv`.
+- **ModelBuilding.ipynb**: Loads preprocessed data (`train_cleaned.csv` and `test_cleaned.csv`), combines them for consistent encoding, adds a Total Income feature, encodes categorical variables, trains a Random Forest Classifier, evaluates its performance, and saves the model and encoders:
 
-### Source Code (src/)
+- `random_forest_model.pkl`: Trained Random Forest model
+- `random_forest_model(1).pkl`: Additional trained Random Forest model
+- `label_encoders.pkl`: Saved LabelEncoders for categorical variables
+- `status_encoder.pkl`: Saved LabelEncoder for target variable
+- `scaler.pkl`: Saved StandardScaler for feature scaling
 
-**data_preprocessing.py**: Defines functions for loading data (`load_data`) and handling missing values (`handle_missing_values`).
+Finally, it makes predictions on the test set and saves results in `loan_predictions.csv`.
 
-**feature_engineering.py**: Contains `add_total_income_feature` function to add a new feature `Total_Income`.
+## Data Merging
 
-**model_training.py**: Provides functions for encoding categorical variables (`encode_categorical_variables`) and training the Random Forest model (`train_model`).
+After obtaining predictions, merge them with the cleaned test data to create the final training dataset:
 
-**predictions.py**: Implements functions for making predictions (`make_predictions`) using the trained model and saving predictions (`save_predictions`).
+```python
+import pandas as pd
 
-### Requirements
+# Load the CSV files for merging
+loan_predictions = pd.read_csv('../data/loan_predictions.csv')
+test_cleaned = pd.read_csv('../data/test_cleaned.csv')
 
-**requirements.txt**: Lists Python dependencies required to run the project.
+# Drop the 'Loan_ID' column from loan_predictions
+loan_predictions = loan_predictions.drop(columns=['Loan_ID'])
+
+# Add remaining columns to test_cleaned
+merged_data = pd.concat([test_cleaned, loan_predictions], axis=1)
+
+# Save the merged data to model_training.csv
+merged_data.to_csv('../data/model_training.csv', index=False)
+
+print("Merged data saved as model_training.csv")
+
+```
+
+### 3. Source Code (`src/`)
+
+- **data_preprocessing.py**: Defines functions for loading data (`load_data`) and handling missing values (`handle_missing_values`).
+
+- **feature_engineering.py**: Contains `add_total_income_feature` function to add a new feature `Total_Income`.
+
+- **model_training.py**: Provides functions for encoding categorical variables (`encode_categorical_variables`) and training the Random Forest model (`train_model`).
+
+- **predictions.py**: Implements functions for making predictions (`make_predictions`) using the trained model and saving predictions (`save_predictions`).
+
+### 4. Requirements
+
+- **requirements.txt**: Lists Python dependencies required to run the project.
 
 ## Usage
 
-### Setup Environment
+1. **Setup Environment**: Install dependencies listed in `requirements.txt`.
 
-Install dependencies listed in `requirements.txt`.
-
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
 
 2. **Exploratory Data Analysis**: Run `EDA.ipynb` to explore and preprocess the data.
 
